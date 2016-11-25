@@ -1,0 +1,10 @@
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import {AppProducts} from "./appProducts";
+
+ReactDOM.render((
+  
+  <AppProducts/>
+  
+  
+), document.getElementById('root'));

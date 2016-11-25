@@ -1,0 +1,96 @@
+GET /documents/_mapping
+
+GET /documents/_count
+
+DELETE /documents
+
+PUT /documents
+{
+      "mappings": {
+         "doc": {
+            "properties": {
+               "author": {
+                  "type": "string",
+                  "fields": {
+                     "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"
+                     }
+                  }
+               },
+               "company": {
+                  "type": "string",
+                  "fields": {
+                     "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"
+                     }
+                  }
+               },
+               "created": {
+                  "type": "date",
+                  "format": "yyyy-MM-dd HH:mm:ss"
+               },
+               "email": {
+                  "type": "string",
+                  "fields": {
+                     "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"
+                     }
+                  }
+               },
+               "fullText": {
+                  "type": "string"
+               },
+               "guid": {
+                  "type": "string",
+                  "fields": {
+                     "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"
+                     }
+                  }
+               },
+               "isActive": {
+                  "type": "boolean"
+               },
+               "sharing": {
+                  "properties": {
+                     "id": {
+                        "type": "long"
+                     },
+                     "name": {
+                        "type": "string",
+                        "fields": {
+                           "raw": {
+                              "type": "string",
+                              "index": "not_analyzed"
+                           }
+                        }
+                     }
+                  }
+               },
+               "size": {
+                  "type": "long"
+               },
+               "tags": {
+                  "type": "string",
+                  "fields": {
+                     "raw": {
+                        "type": "string",
+                        "index": "not_analyzed"
+                     }
+                  }
+               },
+               "type": {
+                  "type": "string",
+                  "index": "not_analyzed"
+               }
+            }
+         }
+      }
+
+}
+
+GET /documents/_mapping

@@ -1,0 +1,26 @@
+[
+  '{{repeat(1, 700)}}',
+  {
+    guid: '{{guid()}}',
+    isActive: '{{bool()}}',
+    size: '{{integer(1, 1000)}}',
+    author: '{{firstName()}} {{surname()}}',
+    filename: '{{lorem(3, "words")}}',
+    company: '{{random("Post", "UBS", "Gemeinde", "Schulgemeinde", "Verein")}}',
+    email: '{{email()}}',
+    fullText: '{{lorem(1, "paragraphs")}}',
+    type: '{{random("https://freeiconshop.com/files/edd/pdf-flat.png", "https://freeiconshop.com/files/edd/html-flat-128x128.png", "https://freeiconshop.com/files/edd/email-flat-128x128.png")}}',
+    created: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-dd HH:mm:ss")}}',
+    tags: [
+      '{{repeat(4)}}',
+      '{{random("Privat", "Geschäflich", "Rechnung", "Dokument", "Behörden", "Reisen")}}'
+    ],
+    sharing: [
+      '{{repeat(3)}}',
+      {
+        id: '{{index()}}',
+        name: '{{firstName()}} {{surname()}}'
+      }
+    ]
+  }
+]

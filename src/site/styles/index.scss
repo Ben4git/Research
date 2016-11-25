@@ -1,0 +1,96 @@
+@import "~normalize.css/normalize";
+@import '~typographic/scss/typographic';
+
+$header-ratio       : $golden;
+$body-font          : "Roboto";
+$body-font-weight   : 400;
+$body-color         : #666;
+$header-font        : "Roboto";
+$header-font-weight : 500;
+$header-color       : #111;
+$min-font           : 12px;
+$max-font           : 20px;
+$min-width          : 100px;
+$max-width          : 1000px;
+
+@include typographic;
+// @include grid-overlay(blue, 2);
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color:#28AFEB;
+}
+
+.site {
+  &__content {
+
+  }
+}
+
+.menu-inner {
+  display:flex;
+  max-width: 1020px;
+  justify-content: space-around;
+  margin:0 auto;
+  flex-flow:row no wrap;
+  align-items: stretch;
+}
+
+.menu {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  background:rgba(55,81,124,1);
+  padding:10px;
+
+  &__title {
+    flex:auto;
+    font-weight:400;
+    color:#fff;
+    font-size:16px;
+    letter-spacing: 0.5px;
+  }
+
+  &__tab {
+    color:#d4e6ff;
+    font-weight:400;
+    font-size:15px;
+    text-align: right;
+    padding:0 20px;
+    transition: color 0.3s;
+
+    &:hover {
+      color:#fff;
+    }
+
+    &.is-active {
+      color:#fff;
+    }
+
+    &--github {
+      position:relative;
+
+      &:before {
+        content:"";
+        background:url(../images/github-icon.png);
+        width:26px;
+        height:26px;
+        background-size: 26px 26px;
+        position:absolute;
+        top:50%;
+        left:10px;
+        margin-top:-13px;
+      }
+
+    }
+  }
+}
